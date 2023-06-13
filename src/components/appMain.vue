@@ -3,51 +3,52 @@ import axios from "axios"
 
 export default {
     name: "appMain",
-    data(){
-        return{
+    data() {
+        return {
             localhost: 'http://127.0.0.1:8000/',
             projectsEndpoint: 'api/projects',
-            projects: [], 
-            imagesPath: 'storage/'           
+            projects: [],
+            imagesPath: 'storage/'
         }
 
-    }, 
-    methods:{
+    },
+    methods: {
 
     },
-    mounted(){
+    mounted() {
         const fullUrl = this.localhost + this.projectsEndpoint;
         axios.get(fullUrl)
-        .then(response => {
-            this.projects = response.data.projects;
-        })
-        .catch(error =>{
-            console.error(error)
-        })
+            .then(response => {
+                this.projects = response.data.projects;
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
 }
 
 </script>
 
 <template>
-
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
             <div class="col" v-for="project in projects">
-                <div class="card h-100">
+                <div class="card h-100 shadow">
                     <div class="card-header">
-                        <h3 class="text-center">#{{project.id}} {{ project.title }}</h3>
+                        <h3 class="text-center mb-0">#{{ project.id }} {{ project.title }}</h3>
                     </div>
-                    <div class="card-body text-center d-flex align-items-center justify-content-center">
-                        <div>
-                            <img height=150 :src="localhost + imagesPath + project.Image" alt="">
-                        </div>
-                        <div>
-                            <h6>Type:</h6>
-                            <ul>
-                                <li>{{ project.type?.name }}</li>
+                    <div class="card-img-top text-center py-3">
+                        <img height=150 :src="localhost + imagesPath + project.Image" alt="">
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <div class="text-start">
+                            <ul class="p-0">
+                                <h5>Type</h5>
+                                <li class="text-uppercase">{{ project.type?.name }}</li>
                             </ul>
-                            <h6>Technology/ies used:</h6>
+                        </div>
+                        <div class="text-end">
+                            <h5>Technology/ies</h5>
                             <ul>
                                 <li v-for="technology in project.technologies">{{ technology.name }}</li>
                             </ul>
@@ -61,10 +62,7 @@ export default {
             </div>
         </div>
     </div>
-
 </template>
 
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
