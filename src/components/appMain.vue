@@ -48,7 +48,7 @@ export default {
                             </ul>
                         </div>
                         <div class="text-end">
-                            <h5>Technology/ies</h5>
+                            <h5>Technologies</h5>
                             <ul>
                                 <li v-for="technology in project.technologies">{{ technology.name }}</li>
                             </ul>
