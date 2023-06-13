@@ -38,18 +38,23 @@ export default {
                     <div class="card-header">
                         <h3 class="text-center">#{{project.id}} {{ project.title }}</h3>
                     </div>
-                    <div class="card-body text-center">
-                        <img height=150 :src="localhost + imagesPath + project.Image" alt="">
+                    <div class="card-body text-center d-flex align-items-center justify-content-center">
+                        <div>
+                            <img height=150 :src="localhost + imagesPath + project.Image" alt="">
+                        </div>
+                        <div>
+                            <h6>Type:</h6>
+                            <ul>
+                                <li>{{ project.type?.name }}</li>
+                            </ul>
+                            <h6>Technology/ies used:</h6>
+                            <ul>
+                                <li v-for="technology in project.technologies">{{ technology.name }}</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="card-footer">
-                        <h6>Type:</h6>
-                        <ul>
-                            <li>{{ project.type?.name }}</li>
-                        </ul>
-                        <h6>Technology/ies used:</h6>
-                        <ul>
-                            <li>{{ project.technology?.name }}</li>
-                        </ul>
+                        <a :href="project.repo"> {{ project.repo }}</a>
                     </div>
                 </div>
 
