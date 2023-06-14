@@ -39,7 +39,7 @@ export default {
                     <h2>{{project.title}}</h2>
                 </div>
                 <div class="card-img-top text-center py-3" v-if="this.project.Image">
-                    <img class="w-100" :src="localhost + imagesPath + project.Image" alt="project.title">
+                    <img :src="localhost + imagesPath + project.Image" alt="project.title">
                 </div>
                 <div v-else>
                     <img class="w-100" src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" alt="project.title">
@@ -55,9 +55,8 @@ export default {
                         </ul>
                     </div>
                     <div class="Technologies text-end">
-                        <h3>Technologies
-                        </h3>
-                        <ul class="py-0" v-if="this.project.technologies">
+                        <h3>Technologies</h3>
+                        <ul class="py-0" v-if="this.project.technologies.length > 0">
                             <li v-for="technology in project.technologies">{{ technology.name }}</li>
                         </ul>
                         <ul v-else>
