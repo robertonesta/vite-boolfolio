@@ -23,10 +23,45 @@ export default {
                 })
             }
         })
+        .catch(error => {
+            console.error(error)
+        })
     },
 }
 </script>
+
 <template>
-    
+<div class="container" v-if="this.project">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    <h2>{{project.title}}</h2>
+                </div>
+                <div class="card-img-top text-center py-3">
+                    <img :src="localhost + imagesPath + project.Image" alt="">
+                </div>
+                <div class="card-body d-flex justify-content-between text-uppercase">
+                    <div class="Types text-start">
+                        <h3>Type</h3>
+                        <ul class="ps-0">
+                            <li>{{ project.type.name }}</li>
+                        </ul>
+                    </div>
+                    <div class="Technologies text-end">
+                        <h3>Technologies
+                        </h3>
+                        <ul class="py-0 ">
+                            <li v-for="technology in project.technologies">{{ technology.name }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer text-center py-3 fw-bold">
+                    <span>Check out the whole project code at: </span><a class="text-decoration-none" :href="project.repo">{{ project.repo }}</a>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>    
 </template>
 <style></style>
