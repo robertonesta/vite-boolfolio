@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-<div class="container" v-if="this.project">
+<div class="container w-75" v-if="this.project">
     <div class="row">
         <div class="col">
             <div class="card shadow">
