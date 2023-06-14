@@ -38,21 +38,30 @@ export default {
                 <div class="card-header text-center">
                     <h2>{{project.title}}</h2>
                 </div>
-                <div class="card-img-top text-center py-3">
-                    <img :src="localhost + imagesPath + project.Image" alt="">
+                <div class="card-img-top text-center py-3" v-if="this.project.Image">
+                    <img class="w-100" :src="localhost + imagesPath + project.Image" alt="project.title">
+                </div>
+                <div v-else>
+                    <img class="w-100" src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" alt="project.title">
                 </div>
                 <div class="card-body d-flex justify-content-between text-uppercase">
                     <div class="Types text-start">
                         <h3>Type</h3>
-                        <ul class="ps-0">
+                        <ul class="ps-0" v-if="this.project.type">
                             <li>{{ project.type.name }}</li>
+                        </ul>
+                        <ul v-else>
+                            <li>N/A</li>
                         </ul>
                     </div>
                     <div class="Technologies text-end">
                         <h3>Technologies
                         </h3>
-                        <ul class="py-0 ">
+                        <ul class="py-0" v-if="this.project.technologies">
                             <li v-for="technology in project.technologies">{{ technology.name }}</li>
+                        </ul>
+                        <ul v-else>
+                            <li>N/A</li>
                         </ul>
                     </div>
                 </div>
