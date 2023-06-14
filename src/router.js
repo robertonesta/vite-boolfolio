@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import AppHome from './views/AppHome.vue';
-import projectView from './views/projectView.vue';
-
+import ProjectView from './views/ProjectView.vue';
+import AboutView from './views/AboutView.vue';
+import ContactsView from './views/ContactsView.vue';
+import PageNotFoundView from './views/PageNotFoundView.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -14,7 +16,22 @@ const router = createRouter({
         {
             path: '/project/:slug',
             name: 'project',
-            component: projectView
+            component: ProjectView
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: AboutView
+        },
+        {
+            path: '/contacts',
+            name: 'contacts',
+            component: ContactsView
+        },
+        {
+            path: '/pagenotfound',
+            name: 'pagenotfound',
+            component: PageNotFoundView
         },
     ]
 });
