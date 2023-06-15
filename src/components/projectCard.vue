@@ -9,19 +9,19 @@ export default{
 }
 </script>
 <template>
-    <router-link class="text-decoration-none" :to="{'name' : 'project', params:{slug:project.slug}}">
-        <div class="card h-100 shadow">
+    <div class="card h-100 border-0 shadow">
+        <router-link class="text-decoration-none text-dark" :to="{'name' : 'project', params:{slug:project.slug}}">
             <div class="card-header">
                 <h3 class="text-center mb-0 text-decoration-none">#{{ project.id }} {{ project.title }}</h3>
             </div>
-            <div class="card-img-top text-center py-3">
-                <img height=150 :src="localhost + imagesPath + project.Image" alt="">
+            <div class="card-img-top text-center">
+                <img class="img-fluid py-0" :src="localhost + imagesPath + project.Image" alt="">
             </div>
-            <div class="card-footer">
-                <a class="text-decoration-none" :href="project.repo"> {{ project.repo }}</a>
+        </router-link>
+            <div class="card-footer text-center">
+                <a class="text-decoration-none fw-bold" :href="project.repo"> {{ project.repo }}</a>
             </div>
         </div>
-    </router-link>
 </template>
 
 <style></style>

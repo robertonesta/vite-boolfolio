@@ -34,17 +34,17 @@ export default {
 <div class="container w-75" v-if="this.project">
     <div class="row">
         <div class="col">
-            <div class="card shadow">
-                <div class="card-header text-center">
-                    <h2>{{project.title}}</h2>
+            <div class="card border-0 shadow">
+                <div class="card-header border-0 text-center">
+                    <h2 class="text-uppercase">{{project.title}}</h2>
                 </div>
-                <div class="card-img-top text-center py-3" v-if="this.project.Image">
-                    <img :src="localhost + imagesPath + project.Image" alt="project.title">
+                <div class="card-img-top border-0 text-center" v-if="this.project.Image">
+                    <img class="img-fluid" :src="localhost + imagesPath + project.Image" alt="project.title">
                 </div>
                 <div v-else>
-                    <img class="w-100" src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" alt="project.title">
+                    <img class="w-100 h-75" src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png" alt="project.title">
                 </div>
-                <div class="card-body d-flex justify-content-between text-uppercase">
+                <div class="card-body border-0 d-flex justify-content-between text-uppercase">
                     <div class="Types text-start">
                         <h3>Type</h3>
                         <ul class="ps-0" v-if="this.project.type">
@@ -64,7 +64,7 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <div class="card-footer text-center py-3 fw-bold">
+                <div class="card-footer border-0 text-center py-3 fw-bold">
                     <span>Check out the whole project code at: </span><a class="text-decoration-none" :href="project.repo">{{ project.repo }}</a>
                 </div>                
             </div>

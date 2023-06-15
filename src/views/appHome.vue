@@ -33,7 +33,7 @@ export default {
 </script>
 <template>
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
+        <div class="row row-cols-1 row-cols-md-2 g-3">
             <div class="col" v-for="project in projects">
                 <projectCard :project="project" :localhost="localhost" :imagesPath="imagesPath"></projectCard>
             </div>
