@@ -1,6 +1,25 @@
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
 
+body{
+    background-image: linear-gradient(to top, #170015 20%, #1d1d29 80%);
+}
+#title{
+    text-shadow: 7px 6px 5px #e900fe;
+}
+.silver_color{
+   color: #c2c2c3;
+}
+.blueish_color{
+    color: #1d1d29;
+}
+.eggplant_color{
+    color: #170015;
+}
+.card{
+    background-color: #c2c2c3;
+    filter: drop-shadow(-3px 3px 1rem #e900fe);
+}
 .container{
     padding: 2rem 0;
 }
