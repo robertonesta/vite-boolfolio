@@ -1,6 +1,10 @@
 // Import all of Bootstrap's CSS
 @import "/node_modules/bootstrap/scss/bootstrap";
 
+*{
+    font-family: 'Geologica', sans-serif;
+}
+
 body{
     background-image: linear-gradient(to top, #170015 20%, #1d1d29 80%);
 }

@@ -15,6 +15,13 @@ export default {
     },
     methods: {
         submitForm(){
+            
+           
+            let data = {
+                name: this.name,
+                email: this.email,
+                message: this.message,
+            };
 
             axios
             .post('http://127.0.0.1:8000/api/contacts', data)

@@ -15,8 +15,10 @@ export default {
         <div>
             <p class="mb-0 silver_color">&copy; 2023 Roberto Nesta | Boolean</p>
         </div>
-        <div>
-            <a class="text-dark" target="_blank" href="https://www.instagram.com/nobertoresta/"><i class="fa-brands fa-instagram silver_color"></i></a> 
+        <div class="d-flex justify-content-between align-items-center gap-4">
+            <a href="https://www.linkedin.com/in/robertonesta" target="_blank"><i class="fa-brands fa-linkedin silver_color"></i></a> 
+            <a href="https://github.com/robertonesta" target="_blank"><i class="fa-brands fa-github silver_color"></i></a> 
+            <a target="_blank" href="https://www.instagram.com/nobertoresta/"><i class="fa-brands fa-instagram silver_color"></i></a>
         </div>
     </div>
 </template>

@@ -12,7 +12,9 @@ export default {
         <h1 id="title" class="silver_color">&lt;Roberto Nesta Boolfolio&gt;</h1>
     </router-link>
     <nav class="nav justify-content-center align-items-center gap-3 silver_color">
-      <a class="nav-link px-0 silver_color" href="https://github.com/robertonesta" target="_blank"><i class="fa-brands fa-github silver_color"></i> My Github</a>
+      <router-link class="text-decoration-none mb-0 silver_color" :to="{'name' : 'home'}">
+        Home
+    </router-link>
       <router-link class="text-decoration-none mb-0 silver_color" :to="{'name' : 'about'}">
         About me
     </router-link>
