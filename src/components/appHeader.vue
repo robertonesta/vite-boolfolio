@@ -9,7 +9,7 @@ export default {
 <template>
     <div class="container text-center d-flex justify-content-between align-items-center">
         <router-link class="text-decoration-none" :to="{ 'name': 'home' }">
-            <h1 id="title" class="silver_color">&lt;RN&gt;</h1>
+            <h1 id="title" class="silver_color">&lt;nr&gt;</h1>
         </router-link>
         <nav class="nav justify-content-center align-items-center gap-3 silver_color">
             <router-link class="text-decoration-none mb-0 silver_color" :to="{ 'name': 'about' }">

@@ -16,15 +16,19 @@ export default {
     methods: {
         submitForm(){
             
-           
-            let data = {
+           const url = 'http://127.0.0.1:8000/api/contacts'
+            const data = {
                 name: this.name,
                 email: this.email,
                 message: this.message,
             };
 
-            axios
-            .post('http://127.0.0.1:8000/api/contacts', data)
+            axios({
+               method: 'post',
+               url: url,
+               data: data
+            })
+            //.post(url, data)
             .then(response =>{
                 console.log(response);
                 if(!response.data.success){

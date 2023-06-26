@@ -12,11 +12,12 @@ export default {
 </script>
 <template>
 <div class="vh jumbotron py-5">
-    <div class="px-5 d-flex justify-content-center align-items-center">     
+    <div class="px-5 d-flex justify-content-around align-items-center">     
       <div class="me-3">
-        <h1 id="title" class="jumbo_title fw-bold text-uppercase silver_color">Roberto Nesta</h1>
-        <h1 id="title" class="jumbo_title text-uppercase silver_color">Full stack web dev</h1>
-
+        <h1 id="title" class="jumbo_title fw-bold text-uppercase silver_color">
+            Roberto Nesta
+        </h1>
+        <h1 id="title" class="jumbo_title text-uppercase silver_color">web developer</h1>
       </div>
         <div class="ms-3">
           <img class="pic" src="../assets/img/pic.jpg" alt="">
