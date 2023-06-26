@@ -33,6 +33,7 @@ export default {
   border-radius: 50%;
   width: 400px;
   aspect-ratio: 1/1;
+  filter:drop-shadow(0 0 10px #00FF57);
 }
 .jumbo_title{
     font-size: 5rem;
